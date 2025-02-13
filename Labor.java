@@ -9,13 +9,23 @@ package factorialcalculator;
  * @author BRIONES_CpE121
  */
 public class Labor {
-    private int nonneg;
+    private int n;
     
-    public static long Factorial(int n){
-    long result = 1;
-        for (int i = 1; i <= n; i++) {
-            result *= i;
+    public Labor(){
+        this.n = n;
+   
+    }
+    public long calculateFac(){
+        if (n == 0){
+            return -1;
         }
-        return result;
+        long factorial = 1;
+        for (int i = 1; i < n; i++) {
+            factorial *= i;
+        }
+        return factorial;
+    }
+    public void displayResult(){
+        System.out.println("The factorial of " + n + "is: " + calculateFac());
     }
 }
